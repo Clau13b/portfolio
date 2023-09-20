@@ -66,7 +66,11 @@ span{
     font-size: 22px;
     color:white;
 }
-
+.menu ul{
+ 
+  margin-right: 20px;
+  background-color: #05702a88;
+}
  .menu{
    display: flex;
    flex-direction: column;
@@ -83,6 +87,17 @@ span{
     color: white;
     font-family: 'Roboto Flex', sans-serif;
 }
+.checkbtn{
+  font-size: 30px;
+  padding-left: 40px;
+  color:white ;
+  float: right;
+  display: none;
+  cursor: pointer;
+ }
+ #check{
+  display: none;
+ }
 .triangle {
     width: 95%;
     position: relative;
@@ -246,7 +261,7 @@ figure{
 
 
 
-
+ 
   footer
   {
    
@@ -318,6 +333,7 @@ figure{
     color: white;
     font-size: 14px;
   }
+
   /* medias queries */
 
   @media (max-width:768px){
@@ -365,8 +381,24 @@ figure{
     margin-top: 1px;
     font-size: 16px;
     color:white;
-   
-
+   }
+   .checkbtn{
+    display: block;
+   }
+   .menu ul{
+    position: fixed;
+    width: 50%;
+    height: 20vh;
+    top: 80px;
+    left:-1000px;
+    text-align: center;
+    transition: all .3s;
+   }
+li a:hover,li a .active{
+  background: none;
+  color:chartreuse; 
 }
-
+#check:checked ~ ul{
+  left:0
+}
   }
